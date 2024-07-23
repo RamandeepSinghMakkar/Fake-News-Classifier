@@ -1,7 +1,3 @@
-submit.csv: https://www.kaggle.com/c/fake-news/data?select=submit.csv
-
-test.csv: https://www.kaggle.com/c/fake-news/data?select=test.csv
-
 train.csv: https://www.kaggle.com/c/fake-news/data?select=train.csv
 
-Note: The datasets are quite large so they couldn't be directly uploaded.
+Note: The dataset is quite large so it couldn't be directly uploaded.
