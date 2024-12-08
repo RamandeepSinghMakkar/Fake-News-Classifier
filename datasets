@@ -1,3 +1,0 @@
-train.csv: https://www.kaggle.com/c/fake-news/data?select=train.csv
-
-Note: The dataset is quite large so it couldn't be directly uploaded.
