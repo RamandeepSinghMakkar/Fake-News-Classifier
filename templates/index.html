@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Classifier</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container Styling */
+        .container {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Title Styling */
+        h1 {
+            font-size: 1.8em;
+            color: #0073e6;
+            margin-bottom: 15px;
+        }
+
+        /* Description */
+        .description {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Textarea Styling */
+        textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #0073e6;
+            outline: none;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #0073e6;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Prediction Text Styling */
+        .prediction {
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #0073e6;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fake News Classifier</h1>
+        <p class="description">Enter a news article below to determine whether it's real or fake.</p>
+        <form action="/predict" method="post">
+            <label for="news_text" class="visually-hidden">News Text</label>
+            <textarea name="news_text" id="news_text" placeholder="Type or paste news text here..."></textarea>
+            <button type="submit">Classify News</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="prediction">
+            <h3>{{ prediction_text }}</h3>
+        </div>
+        {% endif %}
+
+      <!-- Add this below the prediction section -->
+<div class="footer">
+    <p>Developed by Ramandeep Singh Makkar - Python, Flask, Pytorch, Natural Language Processing, NLTK, Scikit-Learn, Scalable Solutions</p>
+    <p>June 2024</p>
+    <p>
+        <!-- Link to the feedback page -->
+        <a href="/feedback" style="color: #0073e6; text-decoration: none;">Give Feedback</a>
+    </p>
+</div>
+
+    </div>
+</body>
+</html>
