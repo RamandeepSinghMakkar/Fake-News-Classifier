@@ -1,4 +1,5 @@
 # Fake-News-Classifier
+Flask, MYSQL, NLP, Pytorch
 
 In this project, I have used LSTM for classification of fake news. 
 
